@@ -6,13 +6,15 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Project scaffolding is in place. Generator, solver, CLI, and build scripts will land in follow-up commits.
+Public header (`Maze`, `Cell`, API declarations) is in place. Generator, solver, CLI, and build scripts will land in follow-up commits.
 
-## Planned usage
+## Library (so far)
 
-```powershell
-.\build.bat
-.\build\maze-craft.exe --width 31 --height 15 --seed 7 --svg build\maze.svg
+```cpp
+#include "maze.hpp"
+
+// mazecraft::Maze, Cell
+// mazecraft::generate / solve_bfs / to_ascii / to_svg (coming next)
 ```
 
 ## Requirements
