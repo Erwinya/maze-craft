@@ -19,13 +19,15 @@ struct Maze {
     void set(int x, int y, Cell c) { cells[y * width + x] = c; }
 };
 
-/// Odd dimensions recommended (width/height >= 5). Implemented in a follow-up commit.
+/// Odd dimensions recommended (width/height >= 5).
 Maze generate(int width, int height, unsigned seed);
 
 /// Mark a shortest path from start to goal. Implemented in a follow-up commit.
 bool solve_bfs(Maze &maze);
 
 std::string to_ascii(const Maze &maze);
+
+/// SVG export. Implemented in a follow-up commit.
 std::string to_svg(const Maze &maze, int scale = 12);
 
 }  // namespace mazecraft

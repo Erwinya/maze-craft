@@ -6,15 +6,15 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Public header (`Maze`, `Cell`, API declarations) is in place. Generator, solver, CLI, and build scripts will land in follow-up commits.
+Public header, DFS `generate()`, and `to_ascii()` are in place. BFS solve, SVG, CLI, and build scripts will land in follow-up commits.
 
 ## Library (so far)
 
 ```cpp
 #include "maze.hpp"
 
-// mazecraft::Maze, Cell
-// mazecraft::generate / solve_bfs / to_ascii / to_svg (coming next)
+auto maze = mazecraft::generate(31, 15, /*seed=*/7);
+std::cout << mazecraft::to_ascii(maze);
 ```
 
 ## Requirements
