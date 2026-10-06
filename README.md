@@ -6,7 +6,7 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Public header, DFS `generate()`, and `to_ascii()` are in place. BFS solve, SVG, CLI, and build scripts will land in follow-up commits.
+Public header, DFS `generate()`, `to_ascii()`, BFS `solve_bfs()`, and `to_svg()` are in place. CLI and build scripts will land in a follow-up commit.
 
 ## Library (so far)
 
@@ -14,7 +14,9 @@ Public header, DFS `generate()`, and `to_ascii()` are in place. BFS solve, SVG, 
 #include "maze.hpp"
 
 auto maze = mazecraft::generate(31, 15, /*seed=*/7);
+mazecraft::solve_bfs(maze);
 std::cout << mazecraft::to_ascii(maze);
+std::string svg = mazecraft::to_svg(maze);
 ```
 
 ## Requirements
