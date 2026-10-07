@@ -6,9 +6,16 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Public header, DFS `generate()`, `to_ascii()`, BFS `solve_bfs()`, and `to_svg()` are in place. CLI and build scripts will land in a follow-up commit.
+Library and CLI entrypoint are in place. Makefile / `build.bat` will land in a follow-up commit.
 
-## Library (so far)
+## Build (manual)
+
+```powershell
+g++ -std=c++17 -I include -o maze-craft.exe src\maze.cpp src\main.cpp
+.\maze-craft.exe --width 31 --height 15 --seed 7 --svg build\maze.svg
+```
+
+## Library
 
 ```cpp
 #include "maze.hpp"
@@ -16,7 +23,6 @@ Public header, DFS `generate()`, `to_ascii()`, BFS `solve_bfs()`, and `to_svg()`
 auto maze = mazecraft::generate(31, 15, /*seed=*/7);
 mazecraft::solve_bfs(maze);
 std::cout << mazecraft::to_ascii(maze);
-std::string svg = mazecraft::to_svg(maze);
 ```
 
 ## Requirements
