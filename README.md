@@ -1,4 +1,4 @@
-﻿# maze-craft
+# maze-craft
 
 Maze generator (DFS recursive backtracker) and BFS solver in **C++17**.
 
@@ -31,6 +31,17 @@ auto maze = mazecraft::generate(31, 15, /*seed=*/7);
 mazecraft::solve_bfs(maze);
 std::cout << mazecraft::to_ascii(maze);
 ```
+
+
+## ASCII legend
+
+| Char | Meaning |
+|------|---------|
+| `#` | Wall |
+| ` ` (space) | Passage |
+| `.` | Solved path |
+| `S` | Start |
+| `G` | Goal |
 
 ## Requirements
 
