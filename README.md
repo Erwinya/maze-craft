@@ -6,7 +6,7 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Complete: library, CLI, and build scripts (`Makefile`, `build.bat`).
+Complete: library, CLI, build scripts (`Makefile`, `build.bat`), and CI.
 
 ## Build
 
