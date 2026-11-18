@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstddef>
 #include <string>
 #include <utility>
 #include <vector>
@@ -22,6 +23,9 @@ struct Maze {
 // Odd dimensions recommended (width/height >= 5).
 Maze generate(int width, int height, unsigned seed);
 bool solve_bfs(Maze &maze);
+std::size_t count_cells(const Maze &maze, Cell cell);
+// Path length after a successful solve (start + path dots + goal).
+std::size_t path_length(const Maze &maze);
 std::string to_ascii(const Maze &maze);
 std::string to_svg(const Maze &maze, int scale = 12);
 

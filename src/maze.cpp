@@ -110,6 +110,16 @@ bool solve_bfs(Maze &maze) {
     return true;
 }
 
+std::size_t count_cells(const Maze &maze, Cell cell) {
+    return static_cast<std::size_t>(
+        std::count(maze.cells.begin(), maze.cells.end(), cell));
+}
+
+std::size_t path_length(const Maze &maze) {
+    // Start and goal are marked separately from Path dots.
+    return count_cells(maze, Cell::Path) + 2;
+}
+
 std::string to_ascii(const Maze &maze) {
     std::ostringstream out;
     for (int y = 0; y < maze.height; ++y) {
