@@ -6,13 +6,14 @@ Outputs ASCII and optional SVG.
 
 ## Status
 
-Complete: library, CLI, build scripts (`Makefile`, `build.bat`), and CI.
+Complete: library, CLI (`--stats`), smoke tests, build scripts (`Makefile`, `build.bat`), and CI.
 
 ## Build
 
 ```bash
 make
-./maze-craft --width 21 --height 11 --seed 7
+make test
+./maze-craft --width 21 --height 11 --seed 7 --stats
 ```
 
 Windows (MinGW / LLVM):
@@ -30,6 +31,7 @@ build\maze-craft.exe --width 21 --height 11 --seed 7 --svg build\maze.svg
 auto maze = mazecraft::generate(31, 15, /*seed=*/7);
 mazecraft::solve_bfs(maze);
 std::cout << mazecraft::to_ascii(maze);
+std::size_t steps = mazecraft::path_length(maze);
 ```
 
 

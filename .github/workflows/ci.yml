@@ -12,5 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build
         run: make
+      - name: Test
+        run: make test
       - name: Smoke
-        run: ./maze-craft --width 21 --height 11 --seed 7
+        run: ./maze-craft --width 21 --height 11 --seed 7 --stats
